@@ -1,8 +1,10 @@
 import { CONFIG } from "../consts";
+import { PiholeApiResponse, } from "../types";
 
 export async function fetchPiholeData  ()  {
     const response = await fetch(CONFIG.piholeApiUrl);
-    return response.data;
+    const data = await response.json() as PiholeApiResponse;
+    return data;
 };
 
 export function createReport (data: any)  {
