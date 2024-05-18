@@ -1,4 +1,4 @@
-const config = {
+export const CONFIG = {
     piholeApiUrl: process.env.PIHOLE_API_URL,
     email: {
         ADRESS: process.env.EMAIL_ADDRESS,
